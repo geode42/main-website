@@ -1,0 +1,112 @@
+@font-face
+	font-family: 'Inter'
+	src: url('fonts/Inter/Inter-VariableFont_slnt,wght.ttf')
+
+@font-face
+	font-family: 'DMSans'
+	src: url('./fonts/DMSans/DMSans-Regular.ttf')
+
+@font-face
+	font-family: 'DMSans'
+	src: url('fonts/DMSans/DMSans-Medium.ttf')
+	font-weight: medium
+
+@font-face
+	font-family: 'DMSans'
+	src: url('fonts/DMSans/DMSans-Bold.ttf')
+	font-weight: bold
+
+@font-face
+	font-family: 'JetBrains Mono'
+	src: url('fonts/JetBrains Mono/JetBrainsMono-VariableFont_wght.ttf')
+	
+*
+	font-family: 'Inter'
+	
+body
+	height: 100vh
+	margin-top: 0
+	margin-bottom: 0
+	margin-left: 3vw
+
+	display: grid
+	grid-template-columns: 250px 1fr
+	grid-template-rows: 150px 1fr
+	align-items: left
+	column-gap: 5vw
+
+	background-color: #1a1a1a
+	color: #e4e4e4
+
+	> h1
+		grid-column: 1 / 3
+		grid-row: 1 / 2
+
+	> nav
+		grid-column: 1 / 2
+		grid-row: 2 / 3
+
+	> main
+		grid-column: 2 / 3
+		grid-row: 2 / 3
+
+body > h1
+	font-family: 'DMSans'
+	// text-align: center
+	display: flex
+	align-items: center
+	justify-content: center
+
+nav
+	menu
+		padding: 0
+		display: flex
+		flex-direction: column
+		gap: 10px
+		li
+			list-style: none
+
+			a
+				display: block
+
+
+				padding: 15px
+				padding-left: 30px
+				border-radius: 15px
+				transition: background-color 0.2s
+
+				&:hover
+					cursor: pointer
+					background-color: #ffffff17
+
+				color: inherit
+				text-decoration: none
+			
+			&.current-location
+				a
+					background-color: #ffffff17
+
+main
+	max-width: 60vw
+	line-height: 1.7rem
+	overflow-y: scroll
+
+	a
+		color: #0080ff
+		text-decoration: none
+	
+	code
+		font-family: 'JetBrains Mono'
+		background-color: #3a3a3a
+		padding: 3px
+		border-radius: 5px
+		font-size: 0.9rem
+		white-space: nowrap
+	
+	scrollbar-width: none
+
+	h1, h2, h3, h4, h5, h6
+		font-family: 'DM Sans'
+
+	&::-webkit-scrollbar
+		display: none
